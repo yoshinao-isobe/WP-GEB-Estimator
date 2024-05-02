@@ -20,7 +20,7 @@ See the user manuals and the website for WP-GEB-Estimator:
 
 * [PDF: WP-GEB-Estimator User Manual (Japanese version)](docs/WP-GEB-Estimator-User-Manual-jp.pdf)
 * [PDF: WP-GEB-Estimator User Manual (English version)](docs/WP-GEB-Estimator-User-Manual-eng.pdf)
-* [Website: WP-GEB-Estimator](https://staff.aist.go.jp/y-isobe/wp-gen-estimator/index.html)
+* [Website: WP-GEB-Estimator](https://staff.aist.go.jp/y-isobe/wp-geb-estimator/index.html)
 
 # License
 

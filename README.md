@@ -24,4 +24,4 @@ See the user manuals and the website for WP-GEB-Estimator:
 
 # License
 
-[Apache License Version 2.0](LICENSE.txt)
+[Apache License Version 2.0](LICENSE)

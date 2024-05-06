@@ -1,0 +1,4 @@
+type,activation,units,filters,int_tuple,regular_l2,rate
+Flatten,,,,,,
+DenseNoBias,relu,128,,,,
+DenseNoBias,softmax,10,,,,

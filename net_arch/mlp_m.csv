@@ -1,0 +1,13 @@
+type,activation,units,filters,int_tuple,regular_l2,rate
+Flatten,,,,,,
+Dropout,,,,,,
+Dense,linear,256,,,,
+Activation,relu,,,,,
+Dropout,,,,,,
+Dense,linear,256,,,,
+Activation,relu,,,,,
+Dropout,,,,,,
+Dense,linear,256,,,,
+Activation,relu,,,,,
+Dropout,,,,,,
+Dense,softmax,10,,,,

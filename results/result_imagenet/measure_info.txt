@@ -1,0 +1,23 @@
+Parameters for random perturbations:
+ [global]
+  random_seed: 1,  result_dir: result_imagenet,
+  model_dir: inception_v3,  measure_file: measure
+ [dataset]
+  dataset_name: imagenet,  dataset_size: 1000,  dataset_offset: 0,  batch_size: 50,
+  dataset_file: /Users/isobe/datasets/imagenet/1k-tfrecords/validation/validation-*-of-00128,
+  dataset_fmt: tfrecord,  image_width: 0,  image_height: 0,
+ [random perturbation]
+  batch_size: 50,  perturb_sample_size: 525
+
+Measuring test error with random perturbations:
+
+Trainable parameters: 23817352
+Test error : 22.4% (no perturbation)
+
+Perturbation ratio = 0.0001
+  The number of perturbed parameters: 23800136
+  The number of data whose adversarial perturbations are found by random samples: 227/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 22.70%
+  The average of test-errors with random perturbations: 22.43%
+  (Elapsed Time: 1803.9 [sec])
+

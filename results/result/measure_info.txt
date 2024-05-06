@@ -1,0 +1,37 @@
+Parameters for random perturbations:
+ [global]
+  random_seed: 1,  result_dir: result,
+  model_dir: model,  measure_file: measure
+ [dataset]
+  dataset_name: mnist,  dataset_size: 5000,  dataset_offset: 0,  batch_size: 0,
+ [random perturbation]
+  batch_size: 0,  perturb_sample_size: 1215
+
+Measuring test error with random perturbations:
+
+Trainable parameters: 118794
+Test error : 3.34% (no perturbation)
+
+Perturbation ratio = 0.01
+  The number of perturbed parameters: 118282
+  The number of data whose adversarial perturbations are found by random samples: 178/5000
+  The ratio of data whose adversarial perturbations are found by random samples: 3.56%
+  The average of test-errors with random perturbations: 3.32%
+  (Elapsed Time: 287.2 [sec])
+
+
+Perturbation ratio = 0.1
+  The number of perturbed parameters: 118282
+  The number of data whose adversarial perturbations are found by random samples: 318/5000
+  The ratio of data whose adversarial perturbations are found by random samples: 6.36%
+  The average of test-errors with random perturbations: 3.37%
+  (Elapsed Time: 290.0 [sec])
+
+
+Perturbation ratio = 1.0
+  The number of perturbed parameters: 118282
+  The number of data whose adversarial perturbations are found by random samples: 5000/5000
+  The ratio of data whose adversarial perturbations are found by random samples: 100.00%
+  The average of test-errors with random perturbations: 26.38%
+  (Elapsed Time: 294.7 [sec])
+

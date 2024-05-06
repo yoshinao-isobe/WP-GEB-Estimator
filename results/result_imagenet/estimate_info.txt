@@ -1,0 +1,31 @@
+Parameters for estimating generalization error bounds:
+ [global]
+  result_dir: result_imagenet,
+  search_file: search,  estimate_file: estimate
+ [evaluation]
+  delta: 0.1,  delta0_ratio: 0.5,
+  max_nm: 10,  eps_nm: 0.0001
+
+
+Perturbation ratio = 0.0
+  No weight-perturbation:
+    Test error: 22.40%
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.0001
+  Random perturbation sample size: 525
+  Worst weight-perturbation (adaptive threshold):
+    Perturbed generalization error bound: 36.09% (Conf: 90.00%)
+    Perturbed Test error bound: 32.00% (Conf: 95.00%)
+    Adaptive threshold bound (expected): 1.3846% (Conf: 90.00%)
+    Adaptive threshold (average): 1.3098%
+  Worst weight-perturbation (fixed threshold):
+    Perturbed generalization error bound: 26.43% (Conf: 90.00%)
+    Perturbed Test error bound: 22.70% (Conf: 95.00%)
+    Fixed threshold: 1.9982%
+  Random weight-perturbation:
+    Perturbed generalization error bound: 33.16% (Conf: 90.00%)
+    Perturbed Test error bound: 27.62% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+

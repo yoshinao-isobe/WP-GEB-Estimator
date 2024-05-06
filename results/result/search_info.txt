@@ -1,0 +1,33 @@
+Parameters for searching:
+ [global]
+  random_seed: 1,  result_dir: result,
+  measure_file: measure,  search_file: search
+ [search perturbations]
+  batch_size: 10,
+  search_mode: 0,  max_iteration: 20,
+Searching adversarial perturbations:
+
+
+Perturbation ratio = 0.0
+  The number of data whose adversarial perturbations are found:
+    by gradient-search: 0/4833
+    by gradient-search and random-sample: 167/5000
+  (Elapsed Time: 0.0 [sec])
+
+Perturbation ratio = 0.01
+  The number of data whose adversarial perturbations are found:
+    by gradient-search: 990/4822
+    by gradient-search and random-sample: 1168/5000
+  (Elapsed Time: 63.7 [sec])
+
+Perturbation ratio = 0.1
+  The number of data whose adversarial perturbations are found:
+    by gradient-search: 4677/4682
+    by gradient-search and random-sample: 4995/5000
+  (Elapsed Time: 59.4 [sec])
+
+Perturbation ratio = 1.0
+  The number of data whose adversarial perturbations are found:
+    by gradient-search: 0/0
+    by gradient-search and random-sample: 5000/5000
+  (Elapsed Time: 0.0 [sec])

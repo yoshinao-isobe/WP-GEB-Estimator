@@ -1,0 +1,5 @@
+rnd_seed_measure,dataset_name,dataset_size,dataset_offset,dataset_file,dataset_fmt,image_width,image_height,batch_size_measure,model_dir,perturb_bn,perturb_params_size,perturb_ratio,perturb_sample_size,err_num_random,test_err_wst,test_err_avr,rnd_seed_search,batch_size_search,search_mode,max_iteration,err_num_search,err_num
+1,mnist,5000,0,N/A,N/A,N/A,N/A,5000,model,0,0,0,1215,167,0.0334,0.0334,1,10,0,20,0,167
+1,mnist,5000,0,N/A,N/A,N/A,N/A,5000,model,0,118282,0.01,1215,178,0.0356,0.03324543209876543,1,10,0,20,990,1168
+1,mnist,5000,0,N/A,N/A,N/A,N/A,5000,model,0,118282,0.1,1215,318,0.0636,0.0336640329218107,1,10,0,20,4677,4995
+1,mnist,5000,0,N/A,N/A,N/A,N/A,5000,model,0,118282,1.0,1215,5000,1.0,0.2637767901234568,1,10,0,20,0,5000

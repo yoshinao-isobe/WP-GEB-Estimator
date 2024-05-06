@@ -1,0 +1,65 @@
+Parameters for estimating generalization error bounds:
+ [global]
+  result_dir: result,
+  search_file: search,  estimate_file: estimate
+ [evaluation]
+  delta: 0.1,  delta0_ratio: 0.5,
+  max_nm: 10,  eps_nm: 0.0001
+
+
+Perturbation ratio = 0.0
+  No weight-perturbation:
+    Test error: 3.34%
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.01
+  Random perturbation sample size: 1215
+  Worst weight-perturbation (adaptive threshold):
+    Perturbed generalization error bound: 25.01% (Conf: 90.00%)
+    Perturbed Test error bound: 23.36% (Conf: 95.00%)
+    Adaptive threshold bound (expected): 0.7648% (Conf: 90.00%)
+    Adaptive threshold (average): 0.7495%
+  Worst weight-perturbation (fixed threshold):
+    Perturbed generalization error bound: 4.32% (Conf: 90.00%)
+    Perturbed Test error bound: 3.56% (Conf: 95.00%)
+    Fixed threshold: 0.9996%
+  Random weight-perturbation:
+    Perturbed generalization error bound: 6.23% (Conf: 90.00%)
+    Perturbed Test error bound: 4.91% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.1
+  Random perturbation sample size: 1215
+  Worst weight-perturbation (adaptive threshold):
+    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
+    Perturbed Test error bound: 99.90% (Conf: 95.00%)
+    Adaptive threshold bound (expected): 0.0013% (Conf: 90.00%)
+    Adaptive threshold (average): 0.0004%
+  Worst weight-perturbation (fixed threshold):
+    Perturbed generalization error bound: 7.34% (Conf: 90.00%)
+    Perturbed Test error bound: 6.36% (Conf: 95.00%)
+    Fixed threshold: 0.9996%
+  Random weight-perturbation:
+    Perturbed generalization error bound: 6.29% (Conf: 90.00%)
+    Perturbed Test error bound: 4.96% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 1.0
+  Random perturbation sample size: 1215
+  Worst weight-perturbation (adaptive threshold):
+    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
+    Perturbed Test error bound: 100.00% (Conf: 100.00%)
+    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
+    Adaptive threshold (average): 0.0000%
+  Worst weight-perturbation (fixed threshold):
+    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
+    Perturbed Test error bound: 100.00% (Conf: 95.00%)
+    Fixed threshold: 0.9996%
+  Random weight-perturbation:
+    Perturbed generalization error bound: 32.52% (Conf: 90.00%)
+    Perturbed Test error bound: 29.90% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+

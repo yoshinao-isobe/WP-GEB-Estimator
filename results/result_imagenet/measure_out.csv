@@ -1,0 +1,3 @@
+rnd_seed_measure,dataset_name,dataset_size,dataset_offset,dataset_file,dataset_fmt,image_width,image_height,batch_size_measure,model_dir,perturb_bn,perturb_params_size,perturb_ratio,perturb_sample_size,err_num_random,test_err_wst,test_err_avr
+1,imagenet,1000,0,/Users/isobe/datasets/imagenet/1k-tfrecords/validation/validation-*-of-00128,tfrecord,299,299,50,inception_v3,0,0,0,525,224,0.224,0.224
+1,imagenet,1000,0,/Users/isobe/datasets/imagenet/1k-tfrecords/validation/validation-*-of-00128,tfrecord,299,299,50,inception_v3,0,23800136,0.0001,525,227,0.227,0.22430285714285714

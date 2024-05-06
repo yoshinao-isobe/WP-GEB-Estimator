@@ -1,0 +1,33 @@
+Parameters for training:
+ [global]
+  random_seed: 1,  result_dir: result_mnist_cnn_s/result1,  train_file: train
+ [dataset]
+  dataset_name: mnist,  train_dataset_size: 50000,  train_dataset_offset: 0,
+  test_dataset_size: 1000,  test_dataset_offset: 0,
+  validation_ratio: 0.1
+ [training]
+  net_arch_file: net_arch/cnn_s,  model_dir: cnn_s
+  sigma: 0.1,  batch_size: 100,  epochs: 50,
+  dropout_rate: 0.0,  regular_l2: 0.0,
+  learning_rate: 0.01,  decay_rate: 1.0,  decay_steps: 0,
+  early_stop: 0,  early_stop_delta: 0.0,  early_stop_patience: 3
+
+Architecture:
+  0. type:Conv2D, activation:linear, filters:32, int_tuple:(3,3), 
+  1. type:Activation, activation:relu, 
+  2. type:MaxPooling2D, int_tuple:(2,2), 
+  3. type:Dropout, 
+  4. type:Conv2D, activation:linear, filters:64, int_tuple:(3,3), 
+  5. type:Activationactivation:relu
+  6. type:MaxPooling2D, int_tuple:(2,2), 
+  7. type:Dropout, 
+  8. type:Flatten, 
+  9. type:Dense, activation:linear, units:64, 
+ 10. type:Activation, activation:relu, 
+ 11. type:Dropout, 
+ 12. type:Dense, activation:softmax, units:10, 
+
+Fitting time: 102.9 (sec)
+
+Trained model
+  Training error: 0.0%, Testing error: 1.1%

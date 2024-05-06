@@ -1,0 +1,31 @@
+Parameters for training:
+ [global]
+  random_seed: 1,  result_dir: result,  train_file: train
+ [dataset]
+  dataset_name: mnist,  train_dataset_size: 50000,  train_dataset_offset: 0,
+  test_dataset_size: 5000,  test_dataset_offset: 0,
+  validation_ratio: 0.1
+ [training]
+  net_arch_file: net_arch/mlp_s_bn,  model_dir: model
+  sigma: 0.1,  batch_size: 100,  epochs: 50,
+  dropout_rate: 0.0,  regular_l2: 0.0,
+  learning_rate: 0.01,  decay_rate: 1.0,  decay_steps: 0,
+  early_stop: 0,  early_stop_delta: 0.0,  early_stop_patience: 3
+
+Architecture:
+  0. type:Flatten, 
+  1. type:Dropout, 
+  2. type:Dense, activation:linear, units:128, 
+  3. type:BatchNormalization, 
+  4. type:Activation, activation:relu, 
+  5. type:Dropout
+  6. type:Dense, activation:linear, units:128, 
+  7. type:BatchNormalization, 
+  8. type:Activation, activation:relu, 
+  9. type:Dropout, 
+ 10. type:Dense, activation:softmax, units:10, 
+
+Fitting time: 91.2 (sec)
+
+Trained model
+  Training error: 0.0%, Testing error: 3.34%

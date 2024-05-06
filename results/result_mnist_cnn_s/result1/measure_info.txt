@@ -1,0 +1,181 @@
+Parameters for random perturbations:
+ [global]
+  random_seed: 1,  result_dir: result_mnist_cnn_s/result1,
+  model_dir: cnn_s,  measure_file: measure
+ [dataset]
+  dataset_name: mnist,  dataset_size: 1000,  dataset_offset: 0,  batch_size: 1000,
+ [random perturbation]
+  batch_size: 1000,  perturb_sample_size: 348
+
+Measuring test error with random perturbations:
+
+Trainable parameters: 121930
+Test error : 1.1% (no perturbation)
+
+Perturbation ratio = 0.001
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 11/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.10%
+  The average of test-errors with random perturbations: 1.10%
+  (Elapsed Time: 26.6 [sec])
+
+
+Perturbation ratio = 0.002
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 11/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.10%
+  The average of test-errors with random perturbations: 1.10%
+  (Elapsed Time: 26.6 [sec])
+
+
+Perturbation ratio = 0.003
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 11/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.10%
+  The average of test-errors with random perturbations: 1.10%
+  (Elapsed Time: 26.3 [sec])
+
+
+Perturbation ratio = 0.005
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 13/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.30%
+  The average of test-errors with random perturbations: 1.10%
+  (Elapsed Time: 26.3 [sec])
+
+
+Perturbation ratio = 0.007
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 13/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.30%
+  The average of test-errors with random perturbations: 1.12%
+  (Elapsed Time: 26.4 [sec])
+
+
+Perturbation ratio = 0.01
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 13/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.30%
+  The average of test-errors with random perturbations: 1.12%
+  (Elapsed Time: 26.4 [sec])
+
+
+Perturbation ratio = 0.02
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 15/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.50%
+  The average of test-errors with random perturbations: 1.14%
+  (Elapsed Time: 26.5 [sec])
+
+
+Perturbation ratio = 0.03
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 19/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.90%
+  The average of test-errors with random perturbations: 1.16%
+  (Elapsed Time: 26.5 [sec])
+
+
+Perturbation ratio = 0.05
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 22/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 2.20%
+  The average of test-errors with random perturbations: 1.19%
+  (Elapsed Time: 26.4 [sec])
+
+
+Perturbation ratio = 0.07
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 27/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 2.70%
+  The average of test-errors with random perturbations: 1.22%
+  (Elapsed Time: 26.4 [sec])
+
+
+Perturbation ratio = 0.1
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 33/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 3.30%
+  The average of test-errors with random perturbations: 1.24%
+  (Elapsed Time: 26.6 [sec])
+
+
+Perturbation ratio = 0.2
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 85/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 8.50%
+  The average of test-errors with random perturbations: 1.51%
+  (Elapsed Time: 26.5 [sec])
+
+
+Perturbation ratio = 0.3
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 209/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 20.90%
+  The average of test-errors with random perturbations: 2.09%
+  (Elapsed Time: 26.4 [sec])
+
+
+Perturbation ratio = 0.5
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 707/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 70.70%
+  The average of test-errors with random perturbations: 5.09%
+  (Elapsed Time: 26.5 [sec])
+
+
+Perturbation ratio = 0.7
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 996/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 99.60%
+  The average of test-errors with random perturbations: 12.22%
+  (Elapsed Time: 26.5 [sec])
+
+
+Perturbation ratio = 1.0
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 1000/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 100.00%
+  The average of test-errors with random perturbations: 30.77%
+  (Elapsed Time: 26.4 [sec])
+
+
+Perturbation ratio = 2.0
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 1000/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 100.00%
+  The average of test-errors with random perturbations: 75.79%
+  (Elapsed Time: 26.5 [sec])
+
+
+Perturbation ratio = 3.0
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 1000/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 100.00%
+  The average of test-errors with random perturbations: 85.76%
+  (Elapsed Time: 26.6 [sec])
+
+
+Perturbation ratio = 5.0
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 1000/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 100.00%
+  The average of test-errors with random perturbations: 89.24%
+  (Elapsed Time: 26.7 [sec])
+
+
+Perturbation ratio = 7.0
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 1000/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 100.00%
+  The average of test-errors with random perturbations: 89.68%
+  (Elapsed Time: 26.7 [sec])
+
+
+Perturbation ratio = 10.0
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 1000/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 100.00%
+  The average of test-errors with random perturbations: 89.97%
+  (Elapsed Time: 26.4 [sec])
+

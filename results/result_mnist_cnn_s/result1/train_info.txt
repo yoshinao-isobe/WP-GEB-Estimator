@@ -1,3 +1,5 @@
+
+------------------------------
 Parameters for training:
  [global]
   random_seed: 1,  result_dir: result_mnist_cnn_s/result1,  train_file: train
@@ -27,7 +29,7 @@ Architecture:
  11. type:Dropout, 
  12. type:Dense, activation:softmax, units:10, 
 
-Fitting time: 102.9 (sec)
+Fitting time: 76.5 (sec)
 
 Trained model
   Training error: 0.0%, Testing error: 1.1%

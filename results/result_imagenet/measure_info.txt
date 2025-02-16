@@ -1,23 +1,76 @@
+
+------------------------------
 Parameters for random perturbations:
  [global]
   random_seed: 1,  result_dir: result_imagenet,
-  model_dir: inception_v3,  measure_file: measure
- [dataset]
-  dataset_name: imagenet,  dataset_size: 1000,  dataset_offset: 0,  batch_size: 50,
-  dataset_file: /Users/isobe/datasets/imagenet/1k-tfrecords/validation/validation-*-of-00128,
-  dataset_fmt: tfrecord,  image_width: 0,  image_height: 0,
+  search_file: search,   measure_file: measure
  [random perturbation]
-  batch_size: 50,  perturb_sample_size: 525
+  batch_size: 0,  err_thr: 0.02,  perturb_sample_size: 0
+ [unconfidence]
+  delta: 0.1,  delta0_ratio: 0.5,
+
 
 Measuring test error with random perturbations:
 
+
+Perturbation ratio = 0.0
 Trainable parameters: 23817352
-Test error : 22.4% (no perturbation)
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 23800136
+
+Perturbation ratio = 0.0
+ Perturbation sample size = 491
+ Practical error threshold = 1.9968% (Ideal = 2.0000%)
+
+  The number of perturbed parameters: 0
+  The number of data whose adversarial perturbations are found by random samples: 224/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 22.40%
+  The average of test-errors with random perturbations: 22.40%
+  (Elapsed Time: 9.0 [sec])
+
 
 Perturbation ratio = 0.0001
+Trainable parameters: 23817352
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 23800136
+
+Perturbation ratio = 0.0001
+ Perturbation sample size = 472
+ Practical error threshold = 1.9963% (Ideal = 2.0000%)
+
+  The number of perturbed parameters: 23800136
+  The number of data whose adversarial perturbations are found by random samples: 0/680
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 1135.7 [sec])
+
+
+------------------------------
+Parameters for random perturbations:
+ [global]
+  random_seed: 1,  result_dir: result_imagenet,
+  search_file: search,   measure_file: measure
+ [random perturbation]
+  batch_size: 0,  err_thr: 0.02,  perturb_sample_size: 0
+ [unconfidence]
+  delta: 0.1,  delta0_ratio: 0.5,
+
+
+Measuring test error with random perturbations:
+
+
+Perturbation ratio = 0.0001
+Trainable parameters: 23817352
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 23800136
+
+Perturbation ratio = 0.0001
+ Perturbation sample size = 491
+ Practical error threshold = 1.9968% (Ideal = 2.0000%)
+
   The number of perturbed parameters: 23800136
   The number of data whose adversarial perturbations are found by random samples: 227/1000
   The ratio of data whose adversarial perturbations are found by random samples: 22.70%
   The average of test-errors with random perturbations: 22.43%
-  (Elapsed Time: 1803.9 [sec])
+  (Elapsed Time: 1680.4 [sec])
 

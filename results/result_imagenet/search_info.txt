@@ -1,21 +1,53 @@
+
+------------------------------
 Parameters for searching:
+ [dataset]
+  dataset_name: imagenet,  dataset_size: 1000,  dataset_offset: 0,
+  dataset_file: /Users/isobe/datasets/imagenet/1k-tfrecords/validation/validation-*-of-00128,
+  dataset_fmt: tfrecord,  image_width: 0,  image_height: 0,
  [global]
   random_seed: 1,  result_dir: result_imagenet,
-  measure_file: measure,  search_file: search
+  search_file: search
  [search perturbations]
   batch_size: 10,
+  perturb_ratios: [0.0001],
   search_mode: 0,  max_iteration: 20,
+Measuring test error with random perturbations:
+
+Trainable parameters: 23817352
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 23800136
+
 Searching adversarial perturbations:
 
 
-Perturbation ratio = 0.0
-  The number of data whose adversarial perturbations are found:
-    by gradient-search: 0/776
-    by gradient-search and random-sample: 224/1000
-  (Elapsed Time: 0.0 [sec])
-
 Perturbation ratio = 0.0001
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 93/773
-    by gradient-search and random-sample: 320/1000
-  (Elapsed Time: 402.3 [sec])
+    by gradient-search: 320/1000
+  (Elapsed Time: 568.6 [sec])
+
+------------------------------
+Parameters for searching:
+ [dataset]
+  dataset_name: imagenet,  dataset_size: 1000,  dataset_offset: 0,
+  dataset_file: /Users/isobe/datasets/imagenet/1k-tfrecords/validation/validation-*-of-00128,
+  dataset_fmt: tfrecord,  image_width: 0,  image_height: 0,
+ [global]
+  random_seed: 1,  result_dir: result_imagenet,
+  search_file: search
+ [search perturbations]
+  batch_size: 10,
+  perturb_ratios: [0.0001],
+  skip_search: 1
+
+Measuring test error with random perturbations:
+
+Trainable parameters: 23817352
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 23800136
+
+Searching adversarial perturbations:
+
+
+Perturbation ratio = 0.0001
+  The search for adversarial perturbations is skipped.

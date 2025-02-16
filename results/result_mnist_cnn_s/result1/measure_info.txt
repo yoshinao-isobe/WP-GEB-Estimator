@@ -1,181 +1,620 @@
+
+------------------------------
 Parameters for random perturbations:
  [global]
   random_seed: 1,  result_dir: result_mnist_cnn_s/result1,
-  model_dir: cnn_s,  measure_file: measure
- [dataset]
-  dataset_name: mnist,  dataset_size: 1000,  dataset_offset: 0,  batch_size: 1000,
+  search_file: search,   measure_file: measure
  [random perturbation]
-  batch_size: 1000,  perturb_sample_size: 348
+  batch_size: 0,  err_thr: 0.01,  perturb_sample_size: 0
+ [unconfidence]
+  delta: 0.1,  delta0_ratio: 0.5,
+
 
 Measuring test error with random perturbations:
 
-Trainable parameters: 121930
-Test error : 1.1% (no perturbation)
 
-Perturbation ratio = 0.001
-  The number of perturbed parameters: 121930
+Perturbation ratio = 0.0
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.0
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 0
   The number of data whose adversarial perturbations are found by random samples: 11/1000
   The ratio of data whose adversarial perturbations are found by random samples: 1.10%
   The average of test-errors with random perturbations: 1.10%
-  (Elapsed Time: 26.6 [sec])
+  (Elapsed Time: 0.2 [sec])
+
+
+Perturbation ratio = 0.001
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.001
+ Perturbation sample size = 984
+ Practical error threshold = 0.9997% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/983
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 63.3 [sec])
 
 
 Perturbation ratio = 0.002
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.002
+ Perturbation sample size = 984
+ Practical error threshold = 0.9993% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 11/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 1.10%
-  The average of test-errors with random perturbations: 1.10%
-  (Elapsed Time: 26.6 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 0/979
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 63.6 [sec])
 
 
 Perturbation ratio = 0.003
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.003
+ Perturbation sample size = 982
+ Practical error threshold = 0.9997% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/964
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 63.5 [sec])
+
+
+Perturbation ratio = 0.005
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.005
+ Perturbation sample size = 978
+ Practical error threshold = 0.9996% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/925
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 61.2 [sec])
+
+
+Perturbation ratio = 0.007
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.007
+ Perturbation sample size = 971
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/860
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 59.3 [sec])
+
+
+Perturbation ratio = 0.01
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.01
+ Perturbation sample size = 951
+ Practical error threshold = 0.9996% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/705
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 52.0 [sec])
+
+
+Perturbation ratio = 0.02
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.02
+ Perturbation sample size = 784
+ Practical error threshold = 0.9989% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/131
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 26.7 [sec])
+
+
+Perturbation ratio = 0.03
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.03
+ Perturbation sample size = 580
+ Practical error threshold = 1.0000% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/17
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 15.7 [sec])
+
+
+Perturbation ratio = 0.05
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.05
+ Perturbation sample size = 437
+ Practical error threshold = 0.9977% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/4
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 11.9 [sec])
+
+
+Perturbation ratio = 0.07
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.07
+ Perturbation sample size = 299
+ Practical error threshold = 0.9969% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/1
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 8.2 [sec])
+
+
+Perturbation ratio = 0.1
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.1
+ Perturbation sample size = 299
+ Practical error threshold = 0.9969% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/1
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 8.1 [sec])
+
+
+Perturbation ratio = 0.2
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.2
+ Perturbation sample size = 299
+ Practical error threshold = 0.9969% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/1
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 8.1 [sec])
+
+
+Perturbation ratio = 0.3
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.3
+ Perturbation sample size = 299
+ Practical error threshold = 0.9969% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 0/1
+  The ratio of data whose adversarial perturbations are found by random samples: 0.00%
+  The average of test-errors with random perturbations: 0.00%
+  (Elapsed Time: 8.1 [sec])
+
+
+Perturbation ratio = 0.5
+
+All data have been detected as unsafe by search
+
+Perturbation ratio = 0.7
+
+All data have been detected as unsafe by search
+
+Perturbation ratio = 1.0
+
+All data have been detected as unsafe by search
+
+Perturbation ratio = 2.0
+
+All data have been detected as unsafe by search
+
+Perturbation ratio = 3.0
+
+All data have been detected as unsafe by search
+
+Perturbation ratio = 5.0
+
+All data have been detected as unsafe by search
+
+Perturbation ratio = 7.0
+
+All data have been detected as unsafe by search
+
+Perturbation ratio = 10.0
+
+All data have been detected as unsafe by search
+
+------------------------------
+Parameters for random perturbations:
+ [global]
+  random_seed: 1,  result_dir: result_mnist_cnn_s/result1,
+  search_file: search,   measure_file: measure
+ [random perturbation]
+  batch_size: 0,  err_thr: 0.01,  perturb_sample_size: 0
+ [unconfidence]
+  delta: 0.1,  delta0_ratio: 0.5,
+
+
+Measuring test error with random perturbations:
+
+
+Perturbation ratio = 0.001
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.001
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
   The number of data whose adversarial perturbations are found by random samples: 11/1000
   The ratio of data whose adversarial perturbations are found by random samples: 1.10%
   The average of test-errors with random perturbations: 1.10%
-  (Elapsed Time: 26.3 [sec])
+  (Elapsed Time: 63.7 [sec])
+
+
+Perturbation ratio = 0.002
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.002
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 11/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.10%
+  The average of test-errors with random perturbations: 1.10%
+  (Elapsed Time: 63.7 [sec])
+
+
+Perturbation ratio = 0.003
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.003
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
+  The number of perturbed parameters: 121930
+  The number of data whose adversarial perturbations are found by random samples: 11/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.10%
+  The average of test-errors with random perturbations: 1.10%
+  (Elapsed Time: 64.1 [sec])
 
 
 Perturbation ratio = 0.005
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.005
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 13/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 1.30%
-  The average of test-errors with random perturbations: 1.10%
-  (Elapsed Time: 26.3 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 12/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.20%
+  The average of test-errors with random perturbations: 1.09%
+  (Elapsed Time: 63.8 [sec])
 
 
 Perturbation ratio = 0.007
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.007
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 13/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 1.30%
-  The average of test-errors with random perturbations: 1.12%
-  (Elapsed Time: 26.4 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 12/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.20%
+  The average of test-errors with random perturbations: 1.09%
+  (Elapsed Time: 64.0 [sec])
 
 
 Perturbation ratio = 0.01
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.01
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 13/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 1.30%
-  The average of test-errors with random perturbations: 1.12%
-  (Elapsed Time: 26.4 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 12/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.20%
+  The average of test-errors with random perturbations: 1.09%
+  (Elapsed Time: 63.9 [sec])
 
 
 Perturbation ratio = 0.02
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.02
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
   The number of data whose adversarial perturbations are found by random samples: 15/1000
   The ratio of data whose adversarial perturbations are found by random samples: 1.50%
-  The average of test-errors with random perturbations: 1.14%
-  (Elapsed Time: 26.5 [sec])
+  The average of test-errors with random perturbations: 1.09%
+  (Elapsed Time: 63.9 [sec])
 
 
 Perturbation ratio = 0.03
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.03
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 19/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 1.90%
-  The average of test-errors with random perturbations: 1.16%
-  (Elapsed Time: 26.5 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 16/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.60%
+  The average of test-errors with random perturbations: 1.11%
+  (Elapsed Time: 63.8 [sec])
 
 
 Perturbation ratio = 0.05
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.05
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 22/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 2.20%
-  The average of test-errors with random perturbations: 1.19%
-  (Elapsed Time: 26.4 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 18/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 1.80%
+  The average of test-errors with random perturbations: 1.14%
+  (Elapsed Time: 63.9 [sec])
 
 
 Perturbation ratio = 0.07
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.07
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 27/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 2.70%
-  The average of test-errors with random perturbations: 1.22%
-  (Elapsed Time: 26.4 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 25/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 2.50%
+  The average of test-errors with random perturbations: 1.19%
+  (Elapsed Time: 64.0 [sec])
 
 
 Perturbation ratio = 0.1
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.1
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 33/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 3.30%
+  The number of data whose adversarial perturbations are found by random samples: 34/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 3.40%
   The average of test-errors with random perturbations: 1.24%
-  (Elapsed Time: 26.6 [sec])
+  (Elapsed Time: 63.8 [sec])
 
 
 Perturbation ratio = 0.2
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.2
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 85/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 8.50%
-  The average of test-errors with random perturbations: 1.51%
-  (Elapsed Time: 26.5 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 103/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 10.30%
+  The average of test-errors with random perturbations: 1.54%
+  (Elapsed Time: 63.4 [sec])
 
 
 Perturbation ratio = 0.3
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.3
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 209/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 20.90%
+  The number of data whose adversarial perturbations are found by random samples: 265/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 26.50%
   The average of test-errors with random perturbations: 2.09%
-  (Elapsed Time: 26.4 [sec])
+  (Elapsed Time: 63.7 [sec])
 
 
 Perturbation ratio = 0.5
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.5
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 707/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 70.70%
-  The average of test-errors with random perturbations: 5.09%
-  (Elapsed Time: 26.5 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 814/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 81.40%
+  The average of test-errors with random perturbations: 5.25%
+  (Elapsed Time: 64.0 [sec])
 
 
 Perturbation ratio = 0.7
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 0.7
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
-  The number of data whose adversarial perturbations are found by random samples: 996/1000
-  The ratio of data whose adversarial perturbations are found by random samples: 99.60%
-  The average of test-errors with random perturbations: 12.22%
-  (Elapsed Time: 26.5 [sec])
+  The number of data whose adversarial perturbations are found by random samples: 999/1000
+  The ratio of data whose adversarial perturbations are found by random samples: 99.90%
+  The average of test-errors with random perturbations: 12.40%
+  (Elapsed Time: 66.3 [sec])
 
 
 Perturbation ratio = 1.0
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 1.0
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
   The number of data whose adversarial perturbations are found by random samples: 1000/1000
   The ratio of data whose adversarial perturbations are found by random samples: 100.00%
-  The average of test-errors with random perturbations: 30.77%
-  (Elapsed Time: 26.4 [sec])
+  The average of test-errors with random perturbations: 30.71%
+  (Elapsed Time: 66.5 [sec])
 
 
 Perturbation ratio = 2.0
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 2.0
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
   The number of data whose adversarial perturbations are found by random samples: 1000/1000
   The ratio of data whose adversarial perturbations are found by random samples: 100.00%
-  The average of test-errors with random perturbations: 75.79%
-  (Elapsed Time: 26.5 [sec])
+  The average of test-errors with random perturbations: 76.76%
+  (Elapsed Time: 65.3 [sec])
 
 
 Perturbation ratio = 3.0
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 3.0
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
   The number of data whose adversarial perturbations are found by random samples: 1000/1000
   The ratio of data whose adversarial perturbations are found by random samples: 100.00%
-  The average of test-errors with random perturbations: 85.76%
-  (Elapsed Time: 26.6 [sec])
+  The average of test-errors with random perturbations: 86.20%
+  (Elapsed Time: 65.0 [sec])
 
 
 Perturbation ratio = 5.0
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 5.0
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
   The number of data whose adversarial perturbations are found by random samples: 1000/1000
   The ratio of data whose adversarial perturbations are found by random samples: 100.00%
-  The average of test-errors with random perturbations: 89.24%
-  (Elapsed Time: 26.7 [sec])
+  The average of test-errors with random perturbations: 89.03%
+  (Elapsed Time: 65.1 [sec])
 
 
 Perturbation ratio = 7.0
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 7.0
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
   The number of data whose adversarial perturbations are found by random samples: 1000/1000
   The ratio of data whose adversarial perturbations are found by random samples: 100.00%
-  The average of test-errors with random perturbations: 89.68%
-  (Elapsed Time: 26.7 [sec])
+  The average of test-errors with random perturbations: 89.58%
+  (Elapsed Time: 65.1 [sec])
 
 
 Perturbation ratio = 10.0
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Perturbation ratio = 10.0
+ Perturbation sample size = 986
+ Practical error threshold = 0.9994% (Ideal = 1.0000%)
+
   The number of perturbed parameters: 121930
   The number of data whose adversarial perturbations are found by random samples: 1000/1000
   The ratio of data whose adversarial perturbations are found by random samples: 100.00%
-  The average of test-errors with random perturbations: 89.97%
-  (Elapsed Time: 26.4 [sec])
+  The average of test-errors with random perturbations: 89.77%
+  (Elapsed Time: 64.9 [sec])
 

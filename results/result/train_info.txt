@@ -1,3 +1,5 @@
+
+------------------------------
 Parameters for training:
  [global]
   random_seed: 1,  result_dir: result,  train_file: train
@@ -25,7 +27,7 @@ Architecture:
   9. type:Dropout, 
  10. type:Dense, activation:softmax, units:10, 
 
-Fitting time: 91.2 (sec)
+Fitting time: 94.4 (sec)
 
 Trained model
-  Training error: 0.0%, Testing error: 3.34%
+  Training error: 0.03%, Testing error: 3.72%

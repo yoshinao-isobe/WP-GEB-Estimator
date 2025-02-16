@@ -1,371 +1,466 @@
-Parameters for estimating generalization error bounds:
+
+------------------------------
+Parameters for estimating generalization bounds:
  [global]
   result_dir: result_mnist_cnn_s/result1,
-  search_file: search,  estimate_file: estimate
+  measure_file: measure,  estimate_file: estimate
  [evaluation]
-  delta: 0.1,  delta0_ratio: 0.5,
   max_nm: 10,  eps_nm: 0.0001
 
 
 Perturbation ratio = 0.0
   No weight-perturbation:
+    Generalization error bound: 1.96% (Conf: 90.00%)
     Test error: 1.10%
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.001
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 3.45% (Conf: 90.00%)
-    Perturbed Test error bound: 2.00% (Conf: 95.00%)
-    Adaptive threshold bound (expected): 2.9991% (Conf: 90.00%)
-    Adaptive threshold (average): 2.9336%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 2.25% (Conf: 90.00%)
-    Perturbed Test error bound: 1.10% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 5.97% (Conf: 90.00%)
-    Perturbed Test error bound: 3.36% (Conf: 95.00%)
+  Random perturbation sample size: 984
+  Risk (with search):
+    Perturbed generalization risk bound: 2.90% (Conf: 90.00%)
+    Perturbed test risk bound: 1.70% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.002
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 4.58% (Conf: 90.00%)
-    Perturbed Test error bound: 2.90% (Conf: 95.00%)
-    Adaptive threshold bound (expected): 2.9991% (Conf: 90.00%)
-    Adaptive threshold (average): 2.9042%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 2.25% (Conf: 90.00%)
-    Perturbed Test error bound: 1.10% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 5.97% (Conf: 90.00%)
-    Perturbed Test error bound: 3.36% (Conf: 95.00%)
+  Random perturbation sample size: 984
+  Risk (with search):
+    Perturbed generalization risk bound: 3.41% (Conf: 90.00%)
+    Perturbed test risk bound: 2.10% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.003
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 6.15% (Conf: 90.00%)
-    Perturbed Test error bound: 4.20% (Conf: 95.00%)
-    Adaptive threshold bound (expected): 2.9066% (Conf: 90.00%)
-    Adaptive threshold (average): 2.8617%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 2.25% (Conf: 90.00%)
-    Perturbed Test error bound: 1.10% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 5.97% (Conf: 90.00%)
-    Perturbed Test error bound: 3.36% (Conf: 95.00%)
+  Random perturbation sample size: 982
+  Risk (with search):
+    Perturbed generalization risk bound: 5.23% (Conf: 90.00%)
+    Perturbed test risk bound: 3.60% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.9752% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.005
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 10.87% (Conf: 90.00%)
-    Perturbed Test error bound: 8.30% (Conf: 95.00%)
-    Adaptive threshold bound (expected): 2.7922% (Conf: 90.00%)
-    Adaptive threshold (average): 2.7280%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 2.52% (Conf: 90.00%)
-    Perturbed Test error bound: 1.30% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 5.98% (Conf: 90.00%)
-    Perturbed Test error bound: 3.37% (Conf: 95.00%)
+  Random perturbation sample size: 978
+  Risk (with search):
+    Perturbed generalization risk bound: 9.71% (Conf: 90.00%)
+    Perturbed test risk bound: 7.50% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.9416% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.007
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 18.88% (Conf: 90.00%)
-    Perturbed Test error bound: 15.60% (Conf: 95.00%)
-    Adaptive threshold bound (expected): 2.5777% (Conf: 90.00%)
-    Adaptive threshold (average): 2.4913%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 2.52% (Conf: 90.00%)
-    Perturbed Test error bound: 1.30% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 6.01% (Conf: 90.00%)
-    Perturbed Test error bound: 3.39% (Conf: 95.00%)
+  Random perturbation sample size: 971
+  Risk (with search):
+    Perturbed generalization risk bound: 16.83% (Conf: 90.00%)
+    Perturbed test risk bound: 14.00% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.8824% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.01
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 38.14% (Conf: 90.00%)
-    Perturbed Test error bound: 34.00% (Conf: 95.00%)
-    Adaptive threshold bound (expected): 2.0170% (Conf: 90.00%)
-    Adaptive threshold (average): 1.9029%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 2.52% (Conf: 90.00%)
-    Perturbed Test error bound: 1.30% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 6.02% (Conf: 90.00%)
-    Perturbed Test error bound: 3.40% (Conf: 95.00%)
+  Random perturbation sample size: 951
+  Risk (with search):
+    Perturbed generalization risk bound: 33.11% (Conf: 90.00%)
+    Perturbed test risk bound: 29.50% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.7353% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.02
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 95.91% (Conf: 90.00%)
-    Perturbed Test error bound: 94.10% (Conf: 95.00%)
-    Adaptive threshold bound (expected): 0.1809% (Conf: 90.00%)
-    Adaptive threshold (average): 0.1302%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 2.79% (Conf: 90.00%)
-    Perturbed Test error bound: 1.50% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 6.05% (Conf: 90.00%)
-    Perturbed Test error bound: 3.42% (Conf: 95.00%)
+  Random perturbation sample size: 784
+  Risk (with search):
+    Perturbed generalization risk bound: 89.36% (Conf: 90.00%)
+    Perturbed test risk bound: 86.90% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.1550% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.03
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
-    Perturbed Test error bound: 99.80% (Conf: 95.00%)
-    Adaptive threshold bound (expected): 0.0125% (Conf: 90.00%)
-    Adaptive threshold (average): 0.0025%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 3.32% (Conf: 90.00%)
-    Perturbed Test error bound: 1.90% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 6.10% (Conf: 90.00%)
-    Perturbed Test error bound: 3.46% (Conf: 95.00%)
+  Random perturbation sample size: 580
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 90.00%)
+    Perturbed test risk bound: 98.30% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.0273% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.05
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 3.70% (Conf: 90.00%)
-    Perturbed Test error bound: 2.20% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 6.17% (Conf: 90.00%)
-    Perturbed Test error bound: 3.52% (Conf: 95.00%)
+  Random perturbation sample size: 437
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 90.00%)
+    Perturbed test risk bound: 99.60% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.0099% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.07
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 4.33% (Conf: 90.00%)
-    Perturbed Test error bound: 2.70% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 6.23% (Conf: 90.00%)
-    Perturbed Test error bound: 3.56% (Conf: 95.00%)
+  Random perturbation sample size: 299
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 90.00%)
+    Perturbed test risk bound: 99.90% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.0049% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.1
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 5.07% (Conf: 90.00%)
-    Perturbed Test error bound: 3.30% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 6.27% (Conf: 90.00%)
-    Perturbed Test error bound: 3.59% (Conf: 95.00%)
+  Random perturbation sample size: 299
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 90.00%)
+    Perturbed test risk bound: 99.90% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.0049% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.2
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 11.10% (Conf: 90.00%)
-    Perturbed Test error bound: 8.50% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 6.80% (Conf: 90.00%)
-    Perturbed Test error bound: 4.01% (Conf: 95.00%)
+  Random perturbation sample size: 299
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 90.00%)
+    Perturbed test risk bound: 99.90% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.0049% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.3
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 24.53% (Conf: 90.00%)
-    Perturbed Test error bound: 20.90% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 7.89% (Conf: 90.00%)
-    Perturbed Test error bound: 4.88% (Conf: 95.00%)
+  Random perturbation sample size: 299
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 90.00%)
+    Perturbed test risk bound: 99.90% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 0.0049% (Conf: 90.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.5
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 74.50% (Conf: 90.00%)
-    Perturbed Test error bound: 70.70% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 12.73% (Conf: 90.00%)
-    Perturbed Test error bound: 8.94% (Conf: 95.00%)
+  Random perturbation sample size: 0
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 0.7
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
-    Perturbed Test error bound: 99.60% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 22.35% (Conf: 90.00%)
-    Perturbed Test error bound: 17.51% (Conf: 95.00%)
+  Random perturbation sample size: 0
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 1.0
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
-    Perturbed Test error bound: 100.00% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 43.61% (Conf: 90.00%)
-    Perturbed Test error bound: 37.73% (Conf: 95.00%)
+  Random perturbation sample size: 0
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 2.0
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
-    Perturbed Test error bound: 100.00% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 85.96% (Conf: 90.00%)
-    Perturbed Test error bound: 81.64% (Conf: 95.00%)
+  Random perturbation sample size: 0
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 3.0
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
-    Perturbed Test error bound: 100.00% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 93.48% (Conf: 90.00%)
-    Perturbed Test error bound: 90.33% (Conf: 95.00%)
+  Random perturbation sample size: 0
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 5.0
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
-    Perturbed Test error bound: 100.00% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 95.80% (Conf: 90.00%)
-    Perturbed Test error bound: 93.19% (Conf: 95.00%)
+  Random perturbation sample size: 0
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 7.0
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
-    Perturbed Test error bound: 100.00% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 96.07% (Conf: 90.00%)
-    Perturbed Test error bound: 93.55% (Conf: 95.00%)
+  Random perturbation sample size: 0
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
   (Elapsed Time: 0.0 [sec])
 
 
 Perturbation ratio = 10.0
-  Random perturbation sample size: 348
-  Worst weight-perturbation (adaptive threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 100.00%)
-    Perturbed Test error bound: 100.00% (Conf: 100.00%)
-    Adaptive threshold bound (expected): 0.0000% (Conf: 100.00%)
-    Adaptive threshold (average): 0.0000%
-  Worst weight-perturbation (fixed threshold):
-    Perturbed generalization error bound: 100.00% (Conf: 90.00%)
-    Perturbed Test error bound: 100.00% (Conf: 95.00%)
-    Fixed threshold: 2.9991%
-  Random weight-perturbation:
-    Perturbed generalization error bound: 96.25% (Conf: 90.00%)
-    Perturbed Test error bound: 93.78% (Conf: 95.00%)
+  Random perturbation sample size: 0
+  Risk (with search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+------------------------------
+Parameters for estimating generalization bounds:
+ [global]
+  result_dir: result_mnist_cnn_s/result1,
+  measure_file: measure,  estimate_file: estimate
+ [evaluation]
+  max_nm: 10,  eps_nm: 0.0001
+
+
+Perturbation ratio = 0.001
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 2.11% (Conf: 90.00%)
+    Perturbed test risk bound: 1.10% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.32% (Conf: 90.00%)
+    Perturbed test error bound: 2.12% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.002
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 2.11% (Conf: 90.00%)
+    Perturbed test risk bound: 1.10% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.32% (Conf: 90.00%)
+    Perturbed test error bound: 2.12% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.003
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 2.11% (Conf: 90.00%)
+    Perturbed test risk bound: 1.10% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.32% (Conf: 90.00%)
+    Perturbed test error bound: 2.12% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.005
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 2.25% (Conf: 90.00%)
+    Perturbed test risk bound: 1.20% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.31% (Conf: 90.00%)
+    Perturbed test error bound: 2.11% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.007
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 2.25% (Conf: 90.00%)
+    Perturbed test risk bound: 1.20% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.30% (Conf: 90.00%)
+    Perturbed test error bound: 2.10% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.01
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 2.25% (Conf: 90.00%)
+    Perturbed test risk bound: 1.20% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.29% (Conf: 90.00%)
+    Perturbed test error bound: 2.10% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.02
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 2.64% (Conf: 90.00%)
+    Perturbed test risk bound: 1.50% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.30% (Conf: 90.00%)
+    Perturbed test error bound: 2.11% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.03
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 2.77% (Conf: 90.00%)
+    Perturbed test risk bound: 1.60% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.33% (Conf: 90.00%)
+    Perturbed test error bound: 2.13% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.05
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 3.03% (Conf: 90.00%)
+    Perturbed test risk bound: 1.80% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.39% (Conf: 90.00%)
+    Perturbed test error bound: 2.18% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.07
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 3.90% (Conf: 90.00%)
+    Perturbed test risk bound: 2.50% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.48% (Conf: 90.00%)
+    Perturbed test error bound: 2.24% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.1
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 4.99% (Conf: 90.00%)
+    Perturbed test risk bound: 3.40% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 4.58% (Conf: 90.00%)
+    Perturbed test error bound: 2.31% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.2
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 12.81% (Conf: 90.00%)
+    Perturbed test risk bound: 10.30% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 5.10% (Conf: 90.00%)
+    Perturbed test error bound: 2.70% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.3
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 30.01% (Conf: 90.00%)
+    Perturbed test risk bound: 26.50% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 6.03% (Conf: 90.00%)
+    Perturbed test error bound: 3.40% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.5
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 84.28% (Conf: 90.00%)
+    Perturbed test risk bound: 81.40% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 10.67% (Conf: 90.00%)
+    Perturbed test error bound: 7.18% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 0.7
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 100.00% (Conf: 90.00%)
+    Perturbed test risk bound: 99.90% (Conf: 95.00%)
+    Generalization acceptable threshold bound: 1.0000% (Conf: 90.00%)
+  Error:
+    Perturbed generalization error bound: 19.72% (Conf: 90.00%)
+    Perturbed test error bound: 15.12% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 1.0
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
+  Error:
+    Perturbed generalization error bound: 40.18% (Conf: 90.00%)
+    Perturbed test error bound: 34.38% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 2.0
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
+  Error:
+    Perturbed generalization error bound: 84.43% (Conf: 90.00%)
+    Perturbed test error bound: 79.94% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 3.0
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
+  Error:
+    Perturbed generalization error bound: 92.15% (Conf: 90.00%)
+    Perturbed test error bound: 88.74% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 5.0
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
+  Error:
+    Perturbed generalization error bound: 94.28% (Conf: 90.00%)
+    Perturbed test error bound: 91.30% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 7.0
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
+  Error:
+    Perturbed generalization error bound: 94.69% (Conf: 90.00%)
+    Perturbed test error bound: 91.80% (Conf: 95.00%)
+  (Elapsed Time: 0.0 [sec])
+
+
+Perturbation ratio = 10.0
+  Random perturbation sample size: 986
+  Risk (without search):
+    Perturbed generalization risk bound: 100.00% (Conf: 100.00%)
+    Perturbed test risk bound: 100.00% (Conf: 100.00%)
+    Generalization acceptable threshold bound: 0.0000% (Conf: 100.00%)
+  Error:
+    Perturbed generalization error bound: 94.82% (Conf: 90.00%)
+    Perturbed test error bound: 91.97% (Conf: 95.00%)
   (Elapsed Time: 0.0 [sec])
 

@@ -1,141 +1,209 @@
+
+------------------------------
 Parameters for searching:
+ [dataset]
+  dataset_name: mnist,  dataset_size: 1000,  dataset_offset: 0,
  [global]
   random_seed: 1,  result_dir: result_mnist_cnn_s/result2,
-  measure_file: measure,  search_file: search
+  search_file: search
  [search perturbations]
-  batch_size: 50,
+  batch_size: 10,
+  perturb_ratios: [0.001, 0.002, 0.003, 0.005, 0.007, 0.01, 0.02, 0.03, 0.05, 0.07, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0, 2.0, 3.0, 5.0, 7.0, 10.0],
   search_mode: 1,  max_iteration: 20,
+Measuring test error with random perturbations:
+
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
 Searching adversarial perturbations:
 
 
-Perturbation ratio = 0.0
-  The number of data whose adversarial perturbations are found:
-    by gradient-search: 0/989
-    by gradient-search and random-sample: 11/1000
-  (Elapsed Time: 0.0 [sec])
-
 Perturbation ratio = 0.001
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 1/989
-    by gradient-search and random-sample: 12/1000
-  (Elapsed Time: 58.9 [sec])
+    by gradient-search: 14/1000
+  (Elapsed Time: 65.9 [sec])
 
 Perturbation ratio = 0.002
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 1/989
-    by gradient-search and random-sample: 12/1000
-  (Elapsed Time: 64.7 [sec])
+    by gradient-search: 14/1000
+  (Elapsed Time: 70.9 [sec])
 
 Perturbation ratio = 0.003
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 2/989
-    by gradient-search and random-sample: 13/1000
-  (Elapsed Time: 68.5 [sec])
+    by gradient-search: 17/1000
+  (Elapsed Time: 75.5 [sec])
 
 Perturbation ratio = 0.005
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 13/989
-    by gradient-search and random-sample: 24/1000
-  (Elapsed Time: 72.8 [sec])
+    by gradient-search: 25/1000
+  (Elapsed Time: 80.7 [sec])
 
 Perturbation ratio = 0.007
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 24/989
-    by gradient-search and random-sample: 35/1000
-  (Elapsed Time: 77.2 [sec])
+    by gradient-search: 34/1000
+  (Elapsed Time: 84.1 [sec])
 
 Perturbation ratio = 0.01
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 42/989
-    by gradient-search and random-sample: 53/1000
-  (Elapsed Time: 79.3 [sec])
+    by gradient-search: 54/1000
+  (Elapsed Time: 87.0 [sec])
 
 Perturbation ratio = 0.02
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 160/988
-    by gradient-search and random-sample: 172/1000
-  (Elapsed Time: 79.2 [sec])
+    by gradient-search: 192/1000
+  (Elapsed Time: 83.6 [sec])
 
 Perturbation ratio = 0.03
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 410/988
-    by gradient-search and random-sample: 422/1000
-  (Elapsed Time: 64.5 [sec])
+    by gradient-search: 457/1000
+  (Elapsed Time: 69.5 [sec])
 
 Perturbation ratio = 0.05
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 895/987
-    by gradient-search and random-sample: 908/1000
-  (Elapsed Time: 36.3 [sec])
+    by gradient-search: 903/1000
+  (Elapsed Time: 41.9 [sec])
 
 Perturbation ratio = 0.07
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 979/985
-    by gradient-search and random-sample: 994/1000
-  (Elapsed Time: 29.0 [sec])
+    by gradient-search: 999/1000
+  (Elapsed Time: 32.4 [sec])
 
 Perturbation ratio = 0.1
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 976/976
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 28.2 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.3 [sec])
 
 Perturbation ratio = 0.2
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 950/950
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 28.1 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.2 [sec])
 
 Perturbation ratio = 0.3
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 900/900
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 25.7 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.3 [sec])
 
 Perturbation ratio = 0.5
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 707/707
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 20.1 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.3 [sec])
 
 Perturbation ratio = 0.7
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 466/466
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 13.5 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.4 [sec])
 
 Perturbation ratio = 1.0
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 23/23
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 0.8 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.3 [sec])
 
 Perturbation ratio = 2.0
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 0/0
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 0.0 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.4 [sec])
 
 Perturbation ratio = 3.0
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 0/0
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 0.0 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.4 [sec])
 
 Perturbation ratio = 5.0
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 0/0
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 0.0 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.4 [sec])
 
 Perturbation ratio = 7.0
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 0/0
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 0.0 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.4 [sec])
 
 Perturbation ratio = 10.0
   The number of data whose adversarial perturbations are found:
-    by gradient-search: 0/0
-    by gradient-search and random-sample: 1000/1000
-  (Elapsed Time: 0.0 [sec])
+    by gradient-search: 1000/1000
+  (Elapsed Time: 31.4 [sec])
+
+------------------------------
+Parameters for searching:
+ [dataset]
+  dataset_name: mnist,  dataset_size: 1000,  dataset_offset: 0,
+ [global]
+  random_seed: 1,  result_dir: result_mnist_cnn_s/result2,
+  search_file: search
+ [search perturbations]
+  batch_size: 1000,
+  perturb_ratios: [0.001, 0.002, 0.003, 0.005, 0.007, 0.01, 0.02, 0.03, 0.05, 0.07, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0, 2.0, 3.0, 5.0, 7.0, 10.0],
+  skip_search: 1
+
+Measuring test error with random perturbations:
+
+Trainable parameters: 121930
+The parameters (scale, shift) in batch normalization layers are not perturbed.
+Perturbed parameters : 121930
+
+Searching adversarial perturbations:
+
+
+Perturbation ratio = 0.001
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.002
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.003
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.005
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.007
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.01
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.02
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.03
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.05
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.07
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.1
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.2
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.3
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.5
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 0.7
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 1.0
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 2.0
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 3.0
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 5.0
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 7.0
+  The search for adversarial perturbations is skipped.
+
+Perturbation ratio = 10.0
+  The search for adversarial perturbations is skipped.

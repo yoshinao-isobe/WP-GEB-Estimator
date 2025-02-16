@@ -1,4 +1,4 @@
-# Copyright (C) 2024
+# Copyright (C) 2025
 # National Institute of Advanced Industrial Science and Technology (AIST)
 
 # training models (neural classifiers) for demonstrations
@@ -36,8 +36,9 @@ def main(args):
     train_model_dir = rr_dir + '/' + params.model_dir
 
     # save
-    options = params.model_params()
-    utl.save_message(train_file, options, 'w')
+    top_line = '\n------------------------------\n'
+    options = top_line + params.model_params()
+    utl.save_message(train_file, options, 'a')
     print(options)
 
     # ------------------------------------

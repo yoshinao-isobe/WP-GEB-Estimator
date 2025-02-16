@@ -1,4 +1,6 @@
-# 2024/03/29, AIST
+# Copyright (C) 2025
+# National Institute of Advanced Industrial Science and Technology (AIST)
+
 # utilities
 
 import os
@@ -10,6 +12,8 @@ import tensorflow as tf
 
 len_name = 20
 root_dir = os.path.dirname(os.path.realpath(__file__)) + '/../'
+
+MODEL_EXT = '.keras'
 
 
 # ---------------------------------
@@ -48,6 +52,20 @@ def pop_param_ids(layers, remove_layer_name):
                 k += 1
     return ids
 
+
+# perturbed params ids
+def param_ids(layers, remove_layer_name):
+    ids = []
+    k = 0
+    for i in range(len(layers)):
+        layer = layers[i]
+        weights = layer.trainable_weights
+        for j in range(len(weights)):
+            if layer.__class__.__name__ != remove_layer_name\
+                    or remove_layer_name == '':
+                ids.append(k)
+            k += 1
+    return ids
 
 # ---------------------------------
 # flatten batches
@@ -156,7 +174,8 @@ def model_trainable_params_size(model):
 
 
 def params_size(params):
-    tr_size = np.sum([np.prod(v.get_shape()) for v in params])
+    # tr_size = np.sum([np.prod(v.get_shape()) for v in params])
+    tr_size = np.sum([np.prod(v.shape) for v in params])
     total_size = int(tr_size)
     return total_size
 
@@ -168,7 +187,9 @@ def params_size(params):
 def load_model(fn):
     # load the trained model
 
-    dir_fn = root_dir + fn
+    dir_fn = root_dir + fn + MODEL_EXT
+    # dir_fn = root_dir + fn + '.h5'
+    # dir_fn = root_dir + fn
     print('load the model from: ...', dir_fn[-1 * len_name:])
     model = tf.keras.models.load_model(dir_fn)
     # model.summary()
@@ -178,7 +199,7 @@ def load_model(fn):
 def save_model(fn, model):
     # save the trained model
     # root_dir = os.path.dirname(os.path.realpath(__file__)) + '/../'
-    dir_fn = root_dir + fn
+    dir_fn = root_dir + fn + MODEL_EXT
     print('save the model to: ...', dir_fn[-1 * len_name:])
     model.save(dir_fn)
 
@@ -316,3 +337,18 @@ def list_to_str(ls, delimiter):
         if j < len(ls) - 1:
             ls_str += delimiter
     return ls_str
+
+
+# ------------------------------------------------------------
+#   set trainable attribute to non_trainable in layer_name
+# ------------------------------------------------------------
+
+def set_non_trainable_layer(model, layer_name):
+    layers = model.layers
+    for i in range(len(layers)):
+        layer = layers[i]
+        weights = layer.trainable_weights
+        for j in range(len(weights)):
+            if layer.__class__.__name__ == layer_name:
+                layer.trainable = False
+    return model

@@ -1,5 +1,7 @@
-# 2024/03/29, AIST
-# evaluating test-errors with random perturbations on wights
+# Copyright (C) 2025
+# National Institute of Advanced Industrial Science and Technology (AIST)
+
+# evaluating test-errors with random perturbations on weights
 
 import numpy as np
 import tensorflow as tf
@@ -18,7 +20,7 @@ def measure_error_random(
         datasize,
         perturb_ratio,
         perturb_sample_size,
-        perturb_bn,
+        # perturb_bn,
         verbose_measure=1,
         perturb_mode=0):
 
@@ -27,22 +29,16 @@ def measure_error_random(
             model, in_out_datasets)
         err_count = errors * perturb_sample_size
 
-        return err_count
+        return err_count, 0
 
     # empirical error with noise (Monte Carlo)
 
     layers = model.layers
     org_weight = [lyr.get_weights() for lyr in layers]
 
-    rand_opt = tf.keras.optimizers.legacy.SGD(learning_rate=1.0)
-
+    # rand_opt = tf.keras.optimizers.legacy.SGD(learning_rate=1.0)
+    rand_opt = tf.keras.optimizers.SGD(learning_rate=1.0)
     params = model.trainable_variables
-    # remove parameters in batch normalization layers from params
-    if perturb_bn == 0:
-        pop_lst = utl.pop_param_ids(model.layers, BN_name)
-        for i in pop_lst:
-            params.pop(i)
-
     perturb_params_size = utl.params_size(params)
 
     if perturb_mode >= 100:

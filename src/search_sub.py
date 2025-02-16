@@ -1,4 +1,6 @@
-# 2024/03/29, AIST
+# Copyright (C) 2025
+# National Institute of Advanced Industrial Science and Technology (AIST)
+
 # searching for adversarial perturbations
 
 import copy
@@ -22,28 +24,24 @@ def search_adv_perturb(
         search_mode,
         perturb_ratio,
         max_iteration,
-        perturb_bn,
+        # perturb_bn,
         verbose_search=1):
 
     # search_mode
     #  0 or 100: FGSM (FGSM on Weights)
     #  1 or 101: I-FGSM (Iterative FSGM on Weights with early-stopping)
 
-    grad_params = model.trainable_variables
+    # grad_params = model.trainable_variables
     # remove params in batch normalization layers
-    if perturb_bn == 0:
-        pop_lst = utl.pop_param_ids(model.layers, BN_name)
-        for i in pop_lst:
-            grad_params.pop(i)
 
     if search_mode % 100 == 0:
         err_id_list = eval_err_fgsm_main(
-            model, in_out_datasets, search_mode, perturb_ratio, grad_params, verbose_search)
+            model, in_out_datasets, search_mode, perturb_ratio, verbose_search)
 
     elif search_mode % 100 == 1:
         err_id_list = eval_err_ifgsm_main(
             model, in_out_datasets, search_mode, perturb_ratio,
-            max_iteration, grad_params, verbose_search)
+            max_iteration, verbose_search)
 
     else:
         err_id_list = []
@@ -57,7 +55,7 @@ def search_adv_perturb(
 # ===================================================
 
 def eval_err_fgsm_main(
-        model, in_out_datasets, search_mode, perturb_ratio, grad_params, verbose_search):
+        model, in_out_datasets, search_mode, perturb_ratio, verbose_search):
 
     offset = 0
     err_id_list = []
@@ -67,7 +65,7 @@ def eval_err_fgsm_main(
             tf.print(' {:d}: '.format(offset), end='')
 
         sub_err_ids = eval_err_fgsm_sub(
-            model, in_dataset, out_dataset, search_mode, perturb_ratio, grad_params, verbose_search)
+            model, in_dataset, out_dataset, search_mode, perturb_ratio, verbose_search)
 
         err_id_list += [sub_err_id + offset for sub_err_id in sub_err_ids]
         offset += len(out_dataset)
@@ -76,9 +74,11 @@ def eval_err_fgsm_main(
 
 
 def eval_err_fgsm_sub(
-        model, in_dataset, out_dataset, search_mode, perturb_ratio, grad_params, verbose_search):
+        model, in_dataset, out_dataset, search_mode, perturb_ratio, verbose_search):
 
-    gradients = pre_example_gradients(model, in_dataset, out_dataset, grad_params)
+    gradients = pre_example_gradients(model, in_dataset, out_dataset)
+    grad_params = model.trainable_variables
+    # grad_params = [model.trainable_variables[i] for i in perturb_params_ids]
 
     for i in range(len(gradients)):
         if search_mode >= 100:
@@ -94,7 +94,8 @@ def eval_sum_err_grad_list(model, in_dataset, out_dataset, gradients, grad_param
     layers = model.layers
     org_weight = [lyr.get_weights() for lyr in layers]
 
-    err_opt = tf.keras.optimizers.legacy.SGD(learning_rate=1.0)
+    # err_opt = tf.keras.optimizers.legacy.SGD(learning_rate=1.0)
+    err_opt = tf.keras.optimizers.SGD(learning_rate=1.0)
 
     data_size = len(in_dataset)
     grad_size = len(gradients)
@@ -126,7 +127,6 @@ def eval_sum_err_grad_list(model, in_dataset, out_dataset, gradients, grad_param
         tf.print(']')
 
     err_id_list.sort()
-    # tf.print('err_ids = ', err_ids)
 
     return err_id_list
 
@@ -137,7 +137,7 @@ def eval_sum_err_grad_list(model, in_dataset, out_dataset, gradients, grad_param
 
 def eval_err_ifgsm_main(
         model, in_out_datasets, search_mode, perturb_ratio,
-        max_iteration, grad_params, verbose_search):
+        max_iteration, verbose_search):
 
     layers = model.layers
     org_weight = [lyr.get_weights() for lyr in layers]
@@ -157,7 +157,7 @@ def eval_err_ifgsm_main(
 
         err = eval_err_ifgsm_sub(
             model, in_data, out_data, search_mode, perturb_ratio,
-            max_iteration, grad_params, verbose_search)
+            max_iteration, verbose_search)
         if err == 1:
             err_id_list.append(i)
 
@@ -172,15 +172,13 @@ def eval_err_ifgsm_main(
         tf.print()
 
     err_id_list.sort()
-    # tf.print('err_ids = ', err_ids)
 
-    # avg_err = sum_err / data_size
     return err_id_list
 
 
 def eval_err_ifgsm_sub(
         model, in_data, out_data, search_mode, perturb,
-        max_iteration, grad_params, verbose_search):
+        max_iteration, verbose_search):
 
     err = eval_single_error(model, in_data, out_data)
     if err == 1:
@@ -192,9 +190,11 @@ def eval_err_ifgsm_sub(
     if search_mode % 100 == 1:
         mgn = eval_single_margin(model, in_data, out_data)
 
-    err_opt = tf.keras.optimizers.legacy.SGD(learning_rate=1.0)
+    # err_opt = tf.keras.optimizers.legacy.SGD(learning_rate=1.0)
+    err_opt = tf.keras.optimizers.SGD(learning_rate=1.0)
 
     # params = model.trainable_variables
+    grad_params = model.trainable_variables
     org_grad_params = copy.deepcopy(grad_params)
 
     if search_mode >= 100:
@@ -204,7 +204,7 @@ def eval_err_ifgsm_sub(
 
     for epoch in range(max_iteration):
 
-        grads = single_gradients(model, in_data, out_data, grad_params)
+        grads = single_gradients(model, in_data, out_data)
 
         # I-FGSM (iterative)
         if search_mode % 100 == 1:
@@ -258,13 +258,15 @@ def eval_single_error(model, idata, odata):
 # --------------------
 
 @tf.function(reduce_retracing=True)
-def single_gradients(model, in_data, out_data, params):
+def single_gradients(model, in_data, out_data):
     loss_fun = tf.keras.losses.SparseCategoricalCrossentropy()
+
     in_data0 = tf.expand_dims(in_data, 0)
     out_data0 = tf.expand_dims(out_data, 0)
+    params = model.trainable_variables
 
     with tf.GradientTape() as tape:
-        tape.watch(params)
+        # tape.watch(params)
         out_predict1 = model(in_data0)
         neg_loss = loss_fun(out_data0, out_predict1)
 
@@ -275,11 +277,11 @@ def single_gradients(model, in_data, out_data, params):
 
 # if perturb_bn is 0 then the gradients in layer "name_BN" is 0.
 @tf.function(reduce_retracing=True)
-def pre_example_gradients(model, in_dataset, out_dataset, params):
+def pre_example_gradients(model, in_dataset, out_dataset):
 
     def pre_single_gradients(in_out_data):
         in_data, out_data = in_out_data
-        grad = single_gradients(model, in_data, out_data, params)
+        grad = single_gradients(model, in_data, out_data)
         return grad
 
     gradients = tf.vectorized_map(pre_single_gradients, (in_dataset, out_dataset))
@@ -293,11 +295,9 @@ def pre_example_gradients(model, in_dataset, out_dataset, params):
 def eval_single_margin(model, idata, odata):
 
     tf_idata = tf.expand_dims(idata, 0)
-    # print(' odata = ', odata)
     predict = model(tf_idata)
     predict0 = predict[0]
-    # tf.print(' predict.numpy = ', predict.numpy())
-    # tf.print(' type(odata) = ', type(odata))
+
     if type(odata) is np.ndarray:
         odata = odata[0]
     correct_prob = predict0[odata]
@@ -308,9 +308,7 @@ def eval_single_margin(model, idata, odata):
         other_prob = probs[0]
 
     margin = correct_prob - other_prob
-    # margin = np.log(correct_prob) - np.log(other_prob)
 
-    # return margin
     return margin.numpy()
 
 

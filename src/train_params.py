@@ -1,4 +1,6 @@
-# 2024/03/29, AIST
+# Copyright (C) 2025
+# National Institute of Advanced Industrial Science and Technology (AIST)
+
 # train models (neural classifiers) for demonstrations
 # (options for specifying parameters)
 

@@ -3,14 +3,14 @@
 
 import utils as utl
 import keras
-from keras.applications.inception_v3 import InceptionV3
-from keras.applications.inception_resnet_v2 import InceptionResNetV2
-from keras.applications.resnet import ResNet50
-from keras.applications.xception import Xception
-from keras.applications.densenet import DenseNet121, DenseNet169, DenseNet201
-from keras.applications.vgg16 import VGG16
-from keras.applications.vgg19 import VGG19
-from keras.applications.nasnet import NASNetLarge, NASNetMobile
+from tensorflow.keras.applications.inception_v3 import InceptionV3
+from tensorflow.keras.applications.inception_resnet_v2 import InceptionResNetV2
+from tensorflow.keras.applications.resnet import ResNet50
+from tensorflow.keras.applications.xception import Xception
+from tensorflow.keras.applications.densenet import DenseNet121, DenseNet169, DenseNet201
+from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.applications.vgg19 import VGG19
+from tensorflow.keras.applications.nasnet import NASNetLarge, NASNetMobile
 
 
 # ---------------------------------

@@ -1,10 +1,10 @@
 #!/bin/bash
 # 1:result_dir 2:net_arch 3:dataset 4:reg 5:dropout
 
-# 2024/03/29, AIST
+# 2025 AIST
 #  step 1 (train) : training simple classifiers for demonstrations
-#  step 2 (measure) : measuring misclassification rates with random perturbations
 #  step 3 (search) : searching for adversarial perturbations
+#  step 2 (measure) : measuring misclassification rates with random perturbations
 #  step 4 (estimate) : estimating generalization error upper bounds
 
 RESULT_DIR=$1
@@ -22,7 +22,6 @@ TEST_DATASET_OFFSET=0
 cd ../src || exit
 
 # step 1
-<<CCC
 python train_main.py \
     --result_dir $RESULT_DIR \
     --dataset_name $DATASET_NAME \
@@ -34,30 +33,59 @@ python train_main.py \
     --test_dataset_offset $TEST_DATASET_OFFSET \
     --epochs 50 --batch_size 100 \
     --regular_l2 $REG_L2 --dropout_rate $DROPOUT_RATE
-CCC
+
+# --------------------------------------------------
+# with search of adversarial perturbations by I-FGSM
 # step 2
 
-python measure_main.py \
+python search_main.py \
+    --skip_search 0 \
     --result_dir $RESULT_DIR \
     --dataset_name $DATASET_NAME \
     --dataset_size $TEST_DATASET_SIZE \
     --dataset_offset $TEST_DATASET_OFFSET \
     --model_dir $MODEL_DIR \
-    --perturb_sample_size 348 --batch_size 1000 \
     --perturb_ratios "0.001 0.002 0.003 0.005 0.007 0.01 0.02 0.03 0.05 0.07 0.1 0.2 0.3 0.5 0.7 1 2 3 5 7 10"\
+    --search_mode 1
 
 # step 3
 
-python search_main.py \
+python measure_main.py \
     --result_dir $RESULT_DIR \
-    --batch_size 50 \
-    --search_mode 1
+    --err_thr 0.01 \
+    --delta 0.1 \
+    --delta0_ratio 0.5
 
 # step 4
 
 python estimate_main.py \
-    --result_dir $RESULT_DIR \
-    --delta 0.1 --delta0_ratio 0.5
+    --result_dir $RESULT_DIR
 
+# --------------------------------------------------
+# without search
+# step 2
+
+python search_main.py \
+    --skip_search 1 \
+    --result_dir $RESULT_DIR \
+    --dataset_name $DATASET_NAME \
+    --dataset_size $TEST_DATASET_SIZE \
+    --dataset_offset $TEST_DATASET_OFFSET \
+    --model_dir $MODEL_DIR \
+    --batch_size 1000 \
+    --perturb_ratios "0.001 0.002 0.003 0.005 0.007 0.01 0.02 0.03 0.05 0.07 0.1 0.2 0.3 0.5 0.7 1 2 3 5 7 10"\
+
+# step 3
+
+python measure_main.py \
+    --result_dir $RESULT_DIR \
+    --err_thr 0.01 \
+    --delta 0.1 \
+    --delta0_ratio 0.5
+
+# step 4
+
+python estimate_main.py \
+    --result_dir $RESULT_DIR
 
 cd ../examples || exit

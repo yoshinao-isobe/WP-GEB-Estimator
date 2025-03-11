@@ -1,6 +1,7 @@
 # 2024/03/29, AIST
 # setting datasets
-
+import time
+import threading
 import tensorflow as tf
 import numpy as np
 import glob
@@ -8,6 +9,10 @@ import glob
 import model as mdl
 
 Keras_dataset = {'mnist', 'fashion_mnist', 'cifar10'}
+
+Reload_max = 10
+Reload_wait_time = 5
+lock = threading.Lock()
 
 
 class Dataset(object):
@@ -43,9 +48,8 @@ class Dataset(object):
             # not safe
             # ssl._create_default_https_context = ssl._create_unverified_context
 
-            (train_in_dataset, train_out_dataset), \
-            (test_in_dataset, test_out_dataset) =\
-                dataset_module.load_data()
+            (train_in_dataset, train_out_dataset), (test_in_dataset, test_out_dataset) = \
+                reload_data(dataset_module)
 
             if train_flag:
                 in_dataset = train_in_dataset
@@ -93,6 +97,23 @@ class Dataset(object):
         out_dataset1, out_dataset2 \
             = separate_dataset(dataset=self.out_dataset, ratio=ratio1)
         return (in_dataset1, out_dataset1), (in_dataset2, out_dataset2)
+
+
+def reload_data(dataset_module):
+    emp = np.array([])
+    for n in range(Reload_max):
+        try:
+            with lock:
+                (train_in_dataset, train_out_dataset), \
+                    (test_in_dataset, test_out_dataset) = \
+                    dataset_module.load_data()
+            return (train_in_dataset, train_out_dataset), (test_in_dataset, test_out_dataset)
+        except Exception as e:
+            print(f"Loading dataset was failed --> retry [{n+1}]: {e}")
+            time.sleep(Reload_wait_time)
+
+    print("Loading dataset was failed. --> abandon")
+    return (emp, emp), (emp, emp)
 
 
 def load_dataset_file(

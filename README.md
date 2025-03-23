@@ -23,7 +23,7 @@ See the user manuals and the website for WP-GEB-Estimator:
 * [PDF: WP-GEB-Estimator User Manual (Japanese version)](docs/WP-GEB-Estimator-User-Manual-jp.pdf)
 * [PDF: WP-GEB-Estimator User Manual (English version)](docs/WP-GEB-Estimator-User-Manual-eng.pdf)
 * [Website: WP-GEB-Estimator](https://staff.aist.go.jp/y-isobe/wp-geb-estimator/index.html)
-* [AIT (AI Test package for Qunomon) of WP-GEB-Estimator-2](https://github.com/yoshinao-isobe/eval_model_classifier_image_stability_wpgeb)
+* [Website: AIT (AI Test package) of WP-GEB-Estimator-2](https://github.com/yoshinao-isobe/eval_model_classifier_image_stability_wpgeb)
 
 # Acknowledgments
 
